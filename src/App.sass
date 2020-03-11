@@ -1,0 +1,81 @@
+.app
+  text-emphasis: none
+
+.overview
+  padding: 2rem
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 250%
+
+.add-memo
+  .select-type
+    display: flex
+
+    button
+      flex: 1
+      margin: 1px
+      padding: 0.5rem
+      background: #222
+      font-size: 300%
+
+  .selected-type
+    text-align: center
+    font-size: 350%
+
+  form
+    font-size: 120%
+    label
+      width: 100%
+      padding: 0.5rem
+      display: flex
+      align-items: center
+      input
+        margin: 0.5rem
+        padding: 0.5rem
+        flex: 1
+    [type="submit"]
+      color: lightgreen
+      font-weight: bold
+
+  .range-input
+    width: 100%
+    padding: 0 0.5rem
+    display: flex
+    .range-group
+      flex: 1
+      text-align: right
+      > button
+        color: lightgreen
+    .range-line
+      display: flex
+      height: 2rem
+      button
+        flex: 1
+        margin-left: 2px
+        border-radius: 8px
+        background: lightgreen
+        font-size: 100%
+      
+    .selected > button:not(.selected)
+      color: #555
+    .selected ~ .range-group
+      button
+        color: #555
+      .range-line button
+        background: #555
+    .range-line
+      .selected ~ button
+        background: #555
+
+.actions
+  position: fixed
+  bottom: 0
+  width: 100%
+  display: flex
+  > button
+    flex: 1
+    background: #222
+    padding: 0.5rem
+    + button
+      border-left: 1px solid #555
